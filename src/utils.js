@@ -53,3 +53,18 @@ export function closures_func() {
   console.log(myPet.getName());
   console.log(myPet.getSex());
 }
+
+// Arguments objects
+export function arguments_obj_func() {
+  function myConcat(seperator) {
+    let result = "";
+
+    for (let i=1; i < arguments.length; i++) {
+      result += arguments[i] + seperator;
+    }
+
+    return result;
+  }
+
+  console.log(myConcat(", ", "red", "orange", "blue"));
+}

@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {closures_func, nested_func, recursive_func} from "./utils";
+import {arguments_obj_func, closures_func, nested_func, recursive_func} from "./utils";
 
 function App() {
   // recursive call
@@ -11,6 +11,9 @@ function App() {
 
   // closure call
   closures_func();
+
+  // arguments object call
+  arguments_obj_func();
 
   return (
     <div className="App">
