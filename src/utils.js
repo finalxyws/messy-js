@@ -1,4 +1,4 @@
-// Recusive func
+// Recursive func
 export function recursive_func(i) {
   if (i<0) {
     return;
@@ -87,3 +87,15 @@ export function arguments_obj_func() {
 // This function first initializes an empty array called `digits`.
 // It then uses a `for` loop to generate 10 random digits, and pushes each one onto the `digits` array.
 // Finally, it returns the maximum value in the `digits` array using the `Math.max` method and the spread operator (`...`).
+
+
+// Write a regular expression to judge whether it is a legal URL
+// Here is a regular expression to match a legal URL:
+// ```
+// ^(http|https)://[a-zA-Z0-9-\.]+\.[a-zA-Z]{2,}(?:/?|[/?]\S+)$
+// ```
+//
+// This regular expression matches URLs that start with either `http` or `https`, followed by `://`
+// and contain a domain name consisting of alphanumeric characters, hyphens, and dots, followed by a top-level domain (such as `.com`, `.net`, or `.edu`).
+//
+// The regular expression allows for optional path and query parameters, which can be specified using `/` and `?` characters, respectively.
