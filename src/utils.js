@@ -71,31 +71,69 @@ export function arguments_obj_func() {
   console.log(myConcat(", ", "red", "orange", "blue"));
 }
 
-// Write a function to select the largest number from 10 random digits in javascript.
-// Sure, here's an example function that will generate 10 random digits (between 0 and 9) and return the largest one:
-//
-// ```javascript
-// function getLargestDigit() {
-//   const digits = [];
-//   for (let i = 0; i < 10; i++) {
-//     digits.push(Math.floor(Math.random() * 10));
-//   }
-//   return Math.max(...digits);
-// }
-// ```
-//
-// This function first initializes an empty array called `digits`.
-// It then uses a `for` loop to generate 10 random digits, and pushes each one onto the `digits` array.
-// Finally, it returns the maximum value in the `digits` array using the `Math.max` method and the spread operator (`...`).
+/*
+ Write a function to select the largest number from 10 random digits in javascript.
+ Sure, here's an example function that will generate 10 random digits (between 0 and 9) and return the largest one:
 
+ ```javascript
+ function getLargestDigit() {
+   const digits = [];
+   for (let i = 0; i < 10; i++) {
+     digits.push(Math.floor(Math.random() * 10));
+   }
+   return Math.max(...digits);
+ }
+ ```
 
-// Write a regular expression to judge whether it is a legal URL
-// Here is a regular expression to match a legal URL:
-// ```
-// ^(http|https)://[a-zA-Z0-9-\.]+\.[a-zA-Z]{2,}(?:/?|[/?]\S+)$
-// ```
-//
-// This regular expression matches URLs that start with either `http` or `https`, followed by `://`
-// and contain a domain name consisting of alphanumeric characters, hyphens, and dots, followed by a top-level domain (such as `.com`, `.net`, or `.edu`).
-//
-// The regular expression allows for optional path and query parameters, which can be specified using `/` and `?` characters, respectively.
+ This function first initializes an empty array called `digits`.
+ It then uses a `for` loop to generate 10 random digits, and pushes each one onto the `digits` array.
+ Finally, it returns the maximum value in the `digits` array using the `Math.max` method and the spread operator (`...`).
+*/
+
+/*
+ Write a regular expression to judge whether it is a legal URL
+ Here is a regular expression to match a legal URL:
+ ```
+ ^(http|https)://[a-zA-Z0-9-\.]+\.[a-zA-Z]{2,}(?:/?|[/?]\S+)$
+ ```
+
+ This regular expression matches URLs that start with either `http` or `https`, followed by `://`
+ and contain a domain name consisting of alphanumeric characters, hyphens, and dots, followed by a top-level domain (such as `.com`, `.net`, or `.edu`).
+
+ The regular expression allows for optional path and query parameters, which can be specified using `/` and `?` characters, respectively.
+*/
+
+/*
+* Listen to the clipboard event on MacOS 13.4. If there's a new copied item, save it to database.
+* There should no more than 255 items in database. Please implement it in JavaScript.
+* */
+
+/*
+To accomplish this task in JavaScript, you can use the `clipboard` and `localStorage` APIs. Here is some sample code:
+
+```
+const MAX_ITEMS = 255;
+
+// listen for clipboard changes
+document.addEventListener('paste', function(event) {
+  // get the new clipboard item
+  const newItem = event.clipboardData.getData('text');
+
+  // get the current list of items from local storage
+  let items = JSON.parse(localStorage.getItem('items') || '[]');
+
+  // add the new item to the list
+  items.unshift(newItem);
+
+  // limit the list to MAX_ITEMS
+  items = items.slice(0, MAX_ITEMS);
+
+  // save the updated list to local storage
+  localStorage.setItem('items', JSON.stringify(items));
+});
+```
+
+This code listens for the `paste` event, which is fired whenever something is copied to the clipboard.
+It then gets the new item from the clipboard data and retrieves the current list of items from local storage.
+It adds the new item to the top of the list, limits the list to 255 items, and saves the updated list back to local storage.
+* */
