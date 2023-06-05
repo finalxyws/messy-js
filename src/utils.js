@@ -1,4 +1,5 @@
 // Recursive func
+
 export function recursive_func(i) {
   if (i<0) {
     return;
@@ -138,3 +139,56 @@ This code listens for the `paste` event, which is fired whenever something is co
 It then gets the new item from the clipboard data and retrieves the current list of items from local storage.
 It adds the new item to the top of the list, limits the list to 255 items, and saves the updated list back to local storage.
 * */
+
+// Array functions
+export function array_func() {
+  let cats = ["Dusty", "Minsky", "Twiggy"];
+  cats = cats.concat("Winner", "Lesley");
+
+  cats.forEach((cat) => console.log(cat));
+
+  cats.push("Joker");
+  console.log(cats);
+
+  cats.shift();
+  console.log(cats);
+
+  cats.pop();
+  console.log(cats);
+
+  cats.unshift("Wound", "Pickle");
+  console.log(cats);
+
+  cats = cats.slice(1, 4);
+  console.log(cats);
+
+  console.log(cats.reverse());
+
+  console.log(cats.sort());
+
+  let upperCats = cats.map((cat) => cat.toUpperCase());
+  console.log(upperCats);
+
+  cats = cats.join("-");
+  console.log(cats);
+
+  let a1 = ["a", 10, "b", 20, "c", 30];
+  let a2 = a1.filter((item) => typeof item === "number");
+  console.log(a2);
+
+  console.log(a1.every((item) => {
+    return typeof item === "number";
+  })); // false
+
+  console.log(a2.every((item) => {
+    return typeof item === "number";
+  })); // true
+
+  console.log(a1.some((item) => {
+    return typeof item === "number";
+  })); // true, at least one number
+
+  console.log(a2.some((item) => {
+    return typeof item === "number";
+  })); // true, at least one number
+}
