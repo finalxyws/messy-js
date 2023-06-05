@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {nested_func, recursive_func} from "./utils";
+
+console.log("Hello World!");
+
+recursive_func(3);
+
+console.log(nested_func(3, 4));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

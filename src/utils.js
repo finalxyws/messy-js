@@ -5,6 +5,7 @@ export function recursive_func(i) {
   }
 
   console.log(`${i}`);
+
   recursive_func(i-1);
 }
 
