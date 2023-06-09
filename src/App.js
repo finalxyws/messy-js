@@ -6,6 +6,7 @@ function App() {
 
   myWeakMap.set(myElement, {timesClicked:0});
 
+  // Set func
   function setFunc() {
     // Set
     const mySet = new Set();
@@ -17,7 +18,7 @@ function App() {
 
     for (const item of mySet) {
       console.log(`There're ${item} in the Set.`);
-    };
+    }
   }
 
   // Array func
@@ -74,9 +75,10 @@ function App() {
   }
 
   /*
-   Write a function to select the largest number from 10 random digits in javascript.
-   Sure, here's an example function that will generate 10 random digits (between 0 and 9) and return the largest one:
-
+  * Write a function to select the largest number from 10 random digits in javascript.
+  * Sure, here's an example function that will generate 10 random digits (between 0 and 9) and return the largest one:
+  */
+  /*
    ```javascript
    function getLargestDigit() {
      const digits = [];
@@ -95,7 +97,7 @@ function App() {
   /*
   * Write a regular expression to judge whether it is a legal URL
   * Here is a regular expression to match a legal URL:
-  * */
+  */
   /*
    ```
    ^(http|https)://[a-zA-Z0-9-\.]+\.[a-zA-Z]{2,}(?:/?|[/?]\S+)$
@@ -110,10 +112,12 @@ function App() {
   /*
   * Listen to the clipboard event on MacOS 13.4. If there's a new copied item, save it to database.
   * There should no more than 255 items in database. Please implement it in JavaScript.
-  * */
+  */
   /*
-  To accomplish this task in JavaScript, you can use the `clipboard` and `localStorage` APIs. Here is some sample code:
-
+  * To accomplish this task in JavaScript, you can use the `clipboard` and `localStorage` APIs.
+  * Here is some sample code:
+  * /
+  /*
   ```
   const MAX_ITEMS = 255;
 
@@ -139,7 +143,7 @@ function App() {
   This code listens for the `paste` event, which is fired whenever something is copied to the clipboard.
   It then gets the new item from the clipboard data and retrieves the current list of items from local storage.
   It adds the new item to the top of the list, limits the list to 255 items, and saves the updated list back to local storage.
-  * */
+  */
 
   // Closures
   function closures_func() {
