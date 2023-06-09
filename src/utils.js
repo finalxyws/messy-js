@@ -192,3 +192,17 @@ export function array_func() {
     return typeof item === "number";
   })); // true, at least one number
 }
+
+// Keyed collections
+export function map_func() {
+  const sayings = new Map();
+  sayings.set("dog", "woof");
+  sayings.set("cat", "meow");
+  sayings.set("elephant", "toot");
+
+  console.log(`sayings' size is ${sayings.size}`);
+
+  for (const [key, value] of sayings) {
+    console.log(`${key} goes ${value}`);
+  }
+}
